@@ -3,7 +3,6 @@
 [![Python](https://img.shields.io/badge/Python-3.10.7-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-FF4B4B.svg)](https://streamlit.io/)
 [![LangChain](https://img.shields.io/badge/LangChain-0.1.0-green.svg)](https://www.langchain.com/)
-[![Groq](https://img.shields.io/badge/Groq_API-Llama_3.3-orange.svg)](https://groq.com/)
 
 An intelligent document analysis system leveraging Retrieval-Augmented Generation (RAG) to answer questions from multiple document formats with context-aware AI responses powered by Groq's Llama 3.3 70B model.
 
