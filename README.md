@@ -11,7 +11,7 @@ This system uses **Groq API** to generate responses with extremely low latency p
 
 ## 🚀 Key Features
 
-* **Multi-format Document Support** (PDF, DOCX, TXT, Web URLs)
+* **Multi-format Document Support** (PDF, DOCX, TXT)
 * **Semantic Search with Vector Embeddings**
 * **Ultra-fast LLM Responses powered by Groq API**
 * **Context-Referenced Answers (based strictly on retrieved chunks)**
@@ -39,7 +39,6 @@ This system uses **Groq API** to generate responses with extremely low latency p
 
 * **PyPDF2** → PDFs
 * **python-docx** → DOCX
-* **LangChain WebLoader** → URLs
 
 ---
 
