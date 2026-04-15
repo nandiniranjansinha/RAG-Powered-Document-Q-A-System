@@ -1,147 +1,114 @@
-# 🤖 RAG-Powered Document Q&A System
+# 🧠 RAG-Powered Document Q&A System
 
-[![Python](https://img.shields.io/badge/Python-3.10.7-blue.svg)]
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-FF4B4B.svg)]
-[![LangChain](https://img.shields.io/badge/LangChain-0.1.0-green.svg)]
-
-An intelligent **Retrieval-Augmented Generation (RAG)** based document Q&A system that allows users to upload documents or provide URLs and get **accurate, context-aware answers**.
-This system uses **Groq API** to generate responses with extremely low latency powered by **Groq’s LPU (Language Processing Unit) hardware acceleration** — resulting in faster and cost-efficient inference.
+A Retrieval-Augmented Generation (RAG) application that allows users to upload documents and ask questions, with answers generated using contextual retrieval and LLM inference.
 
 ---
 
-## 🚀 Key Features
+## 🚀 Features
 
-* **Multi-format Document Support** (PDF, DOCX, TXT)
-* **Semantic Search with Vector Embeddings**
-* **Ultra-fast LLM Responses powered by Groq API**
-* **Context-Referenced Answers (based strictly on retrieved chunks)**
-* **Streamlit Frontend for Seamless Interaction**
-* **Efficient Chunking + FAISS Vector Database**
-* **Caching & Session State to avoid reprocessing**
-
----
-
-## 🛠 Technology Stack
-
-### Core
-
-* **Python 3.10**
-* **Streamlit** (Frontend UI)
-* **LangChain** (Pipeline orchestration)
-
-### AI & Vector Search
-
-* **Groq API for LLM inference**
-* **Sentence Transformers (mpnet-base-v2) for embeddings**
-* **FAISS IndexFlatL2 for vector storage**
-
-### Document Processing
-
-* **PyPDF2** → PDFs
-* **python-docx** → DOCX
+- Supports multiple input formats:
+  - PDF
+  - DOCX
+  - TXT
+  - Raw text input
+- Semantic search using FAISS vector store  
+- Context-grounded answer generation using Groq API  
+- Fallback mechanism for API failures  
+- Interactive UI built with Streamlit  
 
 ---
 
-## ⚡ Why Groq API?
+## 🏗️ Architecture Overview
 
-| Feature                     | Advantage             |
-| --------------------------- | --------------------- |
-| Runs models on LPU hardware | Faster than GPUs      |
-| Sub-second responses        | Ideal for Q&A systems |
-| Cost-efficient inference    | Scales well           |
-| Supports multiple models    | Mixtral, Gemma, etc.  |
+### 1. Document Processing
+- Extract text from uploaded documents (PDF, DOCX, TXT)
+- Clean and prepare text for further processing
 
-📝 *Note:*
-This project uses **Groq API for LLM inference** (not a custom Groq model; the backend model may vary).
+### 2. Chunking
+- Text is split into smaller chunks:
+  - chunk_size = 1000
+  - chunk_overlap = 100
 
----
+### 3. Embeddings
+- Model: sentence-transformers/all-mpnet-base-v2
+- Converts text into dense vector representations
 
-## 🏗 Architecture
+### 4. Vector Store
+- FAISS (IndexFlatL2)
+- Stores embeddings for efficient similarity search
 
-```
-User → Streamlit UI → Document Loader → Chunking → Embeddings →
-FAISS Vector Store → Groq API Model → Final Answer Response
-```
+### 5. Retrieval
+- Top-k similarity search (k=4)
+- Retrieves most relevant chunks for a query
 
----
+### 6. LLM Generation
+- Groq API  
+- Model: llama-3.3-70b-versatile  
+- Uses custom prompt with retrieved context
 
-## 📦 Installation
-
-### 1️⃣ Clone Repository
-
-```bash
-git clone <your-repo-link>
-cd RAG-QA
-```
-
-### 2️⃣ Setup Virtual Environment
-
-```bash
-python -m venv .venv
-source .venv/bin/activate   # Mac/Linux
-.venv\Scripts\activate     # Windows
-```
-
-### 3️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4️⃣ Add API Keys
-
-Create `secret_api_keys.py`:
-
-```python
-groq_api_key = "your_groq_key_here"
-huggingface_api_key = "your_hf_token_here"
-```
+### 7. Fallback Mechanism
+- If API fails:
+  - Returns top retrieved document chunks
+  - Ensures system reliability
 
 ---
 
-## 🎯 Usage Guide
+## ⚙️ Tech Stack
 
-1️⃣ Upload document / paste URL
-2️⃣ Click **Process Document**
-3️⃣ Ask natural language queries
-4️⃣ System retrieves relevant chunks
-5️⃣ Groq API generates contextual answer
-
-**Example Queries**
-
-```
-- Summarize the document in 5 bullet points.
-- What are the challenges mentioned?
-- Compare two approaches in this document.
-```
+- Frontend: Streamlit  
+- Vector Store: FAISS  
+- Embeddings: Hugging Face (sentence-transformers)  
+- LLM Inference: Groq API  
+- Document Processing: PyPDF2, python-docx  
+- NLP Utilities: NLTK  
 
 ---
 
-## 🔧 RAG Configuration
+## 📂 Project Structure
 
-Adjust inside `process_input()` :
-
-```python
-chunk_size = 1000
-chunk_overlap = 100
-k = 4   # retrieved chunks
-```
-
-LLM parameters inside `answer_question()`:
-
-```python
-temperature = 0.2
-max_tokens = 400
-```
+app.py  
+requirements.txt  
+secret_api_keys.py  
+README.md  
 
 ---
 
-## 🚀 Performance Highlights
+## ▶️ How to Run
 
-* Cached embedding model loading
-* FAISS optimized vector search
-* Session state memory persistence
-* Fast inference using Groq API
+git clone https://github.com/nandiniranjansinha/RAG-Powered-Document-Q-A-System.git  
+cd RAG-Powered-Document-Q-A-System  
+pip install -r requirements.txt  
+streamlit run app.py  
+
+---
+
+## 🔐 Setup API Keys
+
+Create a file named `secret_api_keys.py`:
+
+groq_api_key = "your_groq_api_key"  
+huggingface_api_key = "your_huggingface_api_key"  
+
+---
+
+## 💡 Use Cases
+
+- Academic document Q&A  
+- Notes summarization  
+- Extracting key information from reports  
+- Quick document understanding  
+
+---
+
+## ⚠️ Limitations
+
+- PDF text extraction may fail for scanned documents  
+- Uses in-memory FAISS (no persistence)  
+- Context length is limited before truncation  
+
+---
 
 
+## 📌 Summary
 
+This project demonstrates an end-to-end RAG pipeline including document processing, vector search, LLM-based answer generation, and system robustness through fallback handling.
