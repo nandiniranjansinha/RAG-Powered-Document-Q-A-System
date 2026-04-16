@@ -1,114 +1,76 @@
-# 🧠 RAG-Powered Document Q&A System
+# RAG-Powered Document Q&A System
 
-A Retrieval-Augmented Generation (RAG) application that allows users to upload documents and ask questions, with answers generated using contextual retrieval and LLM inference.
-
----
-
-## 🚀 Features
-
-- Supports multiple input formats:
-  - PDF
-  - DOCX
-  - TXT
-  - Raw text input
-- Semantic search using FAISS vector store  
-- Context-grounded answer generation using Groq API  
-- Fallback mechanism for API failures  
-- Interactive UI built with Streamlit  
+A Retrieval-Augmented Generation pipeline for multi-format document Q&A using FAISS vector search and Groq's LLaMA 3.3 70B.
 
 ---
 
-## 🏗️ Architecture Overview
+## How It Works
 
-### 1. Document Processing
-- Extract text from uploaded documents (PDF, DOCX, TXT)
-- Clean and prepare text for further processing
-
-### 2. Chunking
-- Text is split into smaller chunks:
-  - chunk_size = 1000
-  - chunk_overlap = 100
-
-### 3. Embeddings
-- Model: sentence-transformers/all-mpnet-base-v2
-- Converts text into dense vector representations
-
-### 4. Vector Store
-- FAISS (IndexFlatL2)
-- Stores embeddings for efficient similarity search
-
-### 5. Retrieval
-- Top-k similarity search (k=4)
-- Retrieves most relevant chunks for a query
-
-### 6. LLM Generation
-- Groq API  
-- Model: llama-3.3-70b-versatile  
-- Uses custom prompt with retrieved context
-
-### 7. Fallback Mechanism
-- If API fails:
-  - Returns top retrieved document chunks
-  - Ensures system reliability
+1. **Upload** a PDF, DOCX, TXT, or paste raw text
+2. **Chunks** split via `CharacterTextSplitter` (size=1000, overlap=100)
+3. **Embedded** using `sentence-transformers/all-mpnet-base-v2` → stored in FAISS `IndexFlatL2`
+4. **Query** retrieves top-k=4 chunks → passed to Groq API with a strict context-grounded prompt
+5. **Fallback** — if Groq API fails, returns raw retrieved chunks directly
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
-- Frontend: Streamlit  
-- Vector Store: FAISS  
-- Embeddings: Hugging Face (sentence-transformers)  
-- LLM Inference: Groq API  
-- Document Processing: PyPDF2, python-docx  
-- NLP Utilities: NLTK  
-
----
-
-## 📂 Project Structure
-
-app.py  
-requirements.txt  
-secret_api_keys.py  
-README.md  
+| Component | Tool |
+|---|---|
+| UI | Streamlit |
+| Vector Store | FAISS (IndexFlatL2) |
+| Embeddings | Hugging Face (all-mpnet-base-v2) |
+| LLM | Groq API — llama-3.3-70b-versatile |
+| Document Parsing | PyPDF2, python-docx |
 
 ---
 
-## ▶️ How to Run
+## Setup
 
-git clone https://github.com/nandiniranjansinha/RAG-Powered-Document-Q-A-System.git  
-cd RAG-Powered-Document-Q-A-System  
-pip install -r requirements.txt  
-streamlit run app.py  
+```bash
+git clone https://github.com/nandiniranjansinha/RAG-Powered-Document-Q-A-System.git
+cd RAG-Powered-Document-Q-A-System
+pip install -r requirements.txt
+```
 
----
+Create a `.env` file:
+```
+GROQ_API_KEY=your_groq_api_key
+HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_key
+```
 
-## 🔐 Setup API Keys
-
-Create a file named `secret_api_keys.py`:
-
-groq_api_key = "your_groq_api_key"  
-huggingface_api_key = "your_huggingface_api_key"  
-
----
-
-## 💡 Use Cases
-
-- Academic document Q&A  
-- Notes summarization  
-- Extracting key information from reports  
-- Quick document understanding  
+```bash
+streamlit run app.py
+```
 
 ---
 
-## ⚠️ Limitations
+## Project Structure
 
-- PDF text extraction may fail for scanned documents  
-- Uses in-memory FAISS (no persistence)  
-- Context length is limited before truncation  
+```
+├── app.py                    # Main Streamlit app
+├── evaluate_chunking.ipynb   # Chunking ablation experiments
+├── requirements.txt
+├── .env                      # API keys (never commit this)
+├── .env.example              # Template for API keys
+└── .gitignore
+```
 
 ---
 
+## Known Limitations
 
-## 📌 Summary
+- `CharacterTextSplitter` ignores semantic boundaries — splits mid-sentence on structured documents
+- FAISS index is in-memory only (no persistence across sessions)
+- `normalize_embeddings=False` — effect on ranking quality unexplored
+- No automated evaluation yet (RAGAS planned)
 
-This project demonstrates an end-to-end RAG pipeline including document processing, vector search, LLM-based answer generation, and system robustness through fallback handling.
+---
+
+## Research Questions / Next Iteration
+
+- Does `RecursiveCharacterTextSplitter` improve retrieval coherence vs `CharacterTextSplitter`?
+- What is the effect of `normalize_embeddings=True` on ranking for longer documents?
+- Can RAGAS faithfulness + relevancy scores quantify chunking config tradeoffs?
+- Does k=4 retrieval saturate context or leave signal on the table for multi-section docs?
