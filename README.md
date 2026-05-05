@@ -46,10 +46,13 @@ cd RAG-Powered-Document-Q-A-System
 pip install -r requirements.txt
 ```
 
-Create a `.env` file:
+Create a `.env` file in the root directory:
 ```
-GROQ_API_KEY=your_groq_api_key
-HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_key
+# Groq API Key — get yours at https://console.groq.com
+GROQ_API_KEY=your_groq_api_key_here
+
+# Hugging Face API Token — get yours at https://huggingface.co/settings/tokens
+HUGGINGFACEHUB_API_TOKEN=your_huggingface_token_here
 ```
 
 ```bash
