@@ -1,0 +1,436 @@
+doc,splitter,chunk_size,overlap,num_chunks,query,answer,retrieval_latency_s,score
+menu,CharacterTextSplitter,500,50,1,What is the main topic of this document?,"The main topic of this document is a food menu, listing various items such as frankies, wraps, savories, subways, brownies, cheesecakes, chocolates, cookies, and tea cakes, along with their prices.",0.044,3
+menu,CharacterTextSplitter,500,50,1,What food categories are available?,"The available food categories are:
+
+1. Savouries
+2. Subways
+3. Brownies
+4. Cheesecakes
+5. Chocolates
+6. Cookies
+7. Tea Cakes
+8. Salads",0.051,3
+menu,CharacterTextSplitter,500,50,1,What are the most expensive items?,"The most expensive items are:
+
+1. Assorted Bonbons (9pcs) - ₹549 (CHOCOLATES)
+2. Cheesecakes (various flavors) - ₹500-₹600 (CHEESECAKES)
+3. Cookie Cake - ₹650 (TEA CAKES)
+4. Banana & Walnut Cake - ₹600 (TEA CAKES)
+5. Coffee & Walnut Cake - ₹600 (TEA CAKES)
+6. Oats & Date Cake - ₹600 (TEA CAKES)
+7. Marble Tea Cake - ₹600 (TEA CAKES)",0.044,2
+menu,CharacterTextSplitter,500,50,1,What are the ordering or delivery notes?,"The ordering or delivery notes are:
+
+1. Please place your orders in advance.
+2. Cheesecakes available in ½ kg.
+3. Tart Cakes and Bombolonis available as per request.
+4. Due to hike in chocolate costs, prices may vary.
+5. An additional charge applies for the chocolate glaze.
+6. Delivery charges are applicable and will be added separately.",0.04,3
+menu,CharacterTextSplitter,500,50,1,Which items are seasonal or available on request?,"Based on the context, the following items are seasonal or available on request:
+
+1. Mango (seasonal) - under CHEESECAKES
+2. Blueberry (seasonal) - under CHEESECAKES
+3. Thai Mango Salad (seasonal) - under Salads
+4. Tart Cakes and Bombolonis - available as per request (mentioned in the note)",0.041,3
+menu,CharacterTextSplitter,1000,100,1,What is the main topic of this document?,"The main topic of this document is a food menu, listing various items such as frankies, wraps, subways, brownies, cheesecakes, chocolates, cookies, salads, and tea cakes, along with their prices.",0.035,3
+menu,CharacterTextSplitter,1000,100,1,What food categories are available?,"The available food categories are:
+
+1. Savouries
+2. Subways
+3. Brownies
+4. Cheesecakes
+5. Chocolates
+6. Cookies
+7. Salads
+8. Tea Cakes",0.05,3
+menu,CharacterTextSplitter,1000,100,1,What are the most expensive items?,"The most expensive items are:
+
+1. Assorted Bonbons (9pcs) - ₹549 (CHOCOLATES)
+2. Cheesecakes (various flavors) - ₹500-₹600 (CHEESECAKES)
+3. Cookie Cake - ₹650 (TEA CAKES)
+4. Banana & Walnut Cake, Coffee & Walnut Cake, and Oats & Date Cake - ₹600 (TEA CAKES)",0.037,2
+menu,CharacterTextSplitter,1000,100,1,What are the ordering or delivery notes?,"The ordering or delivery notes are as follows:
+
+1. Please place your orders in advance.
+2. Cheesecakes available in ½ kg.
+3. Tart Cakes and Bombolonis available as per request.
+4. Due to hike in chocolate costs, prices may vary.
+5. An additional charge applies for the chocolate glaze.
+6. Delivery charges are applicable and will be added separately.",0.05,3
+menu,CharacterTextSplitter,1000,100,1,Which items are seasonal or available on request?,"Based on the context, the following items are seasonal or available on request:
+
+1. Mango (seasonal) - under CHEESECAKES
+2. Blueberry (seasonal) - under CHEESECAKES
+3. Thai Mango Salad (seasonal) - under Salads
+4. Tart Cakes and Bombolonis - available as per request (note 3)",0.044,3
+menu,CharacterTextSplitter,1500,150,1,What is the main topic of this document?,"The main topic of this document is a food menu, listing various items such as frankies, wraps, savories, subways, brownies, cheesecakes, chocolates, cookies, and tea cakes, along with their prices.",0.04,3
+menu,CharacterTextSplitter,1500,150,1,What food categories are available?,"The available food categories are:
+
+1. Savouries
+2. Subways
+3. Brownies
+4. Cheesecakes
+5. Chocolates
+6. Cookies
+7. Salads
+8. Tea Cakes",0.036,3
+menu,CharacterTextSplitter,1500,150,1,What are the most expensive items?,"The most expensive items are:
+
+1. Assorted Bonbons (9pcs) - ₹549 (CHOCOLATES)
+2. Cheesecakes (various flavors) - ₹500-₹600 (CHEESECAKES)
+3. Cookie Cake - ₹650 (TEA CAKES)
+4. Banana & Walnut Cake, Coffee & Walnut Cake, and Oats & Date Cake - ₹600 (TEA CAKES)",0.04,2
+menu,CharacterTextSplitter,1500,150,1,What are the ordering or delivery notes?,"The ordering or delivery notes are as follows:
+
+1. Please place your orders in advance.
+2. Cheesecakes available in ½ kg.
+3. Tart Cakes and Bombolonis available as per request.
+4. Due to hike in chocolate costs, prices may vary.
+5. An additional charge applies for the chocolate glaze.
+6. Delivery charges are applicable and will be added separately.",0.053,3
+menu,CharacterTextSplitter,1500,150,1,Which items are seasonal or available on request?,"The items that are seasonal or available on request are:
+
+1. Mango (seasonal) - under CHEESECAKES
+2. Blueberry (seasonal) - under CHEESECAKES
+3. Thai Mango Salad (seasonal) - under Salads
+4. Tart Cakes and Bombolonis - available as per request (note 3)",0.047,3
+menu,RecursiveCharacterTextSplitter,500,50,4,What is the main topic of this document?,"The main topic of this document is a food menu, listing various items such as frankies, wraps, savories, subways, brownies, cheesecakes, salads, chocolates, cookies, and tea cakes, along with their prices.",0.03,3
+menu,RecursiveCharacterTextSplitter,500,50,4,What food categories are available?,"The available food categories are:
+
+1. CHEESECAKES
+2. CHOCOLATES
+3. COOKIES
+4. SAVOURIES
+5. SUBWAYS
+6. BROWNIES
+7. SALADS
+8. TEA CAKES",0.047,3
+menu,RecursiveCharacterTextSplitter,500,50,4,What are the most expensive items?,"The most expensive items are:
+
+1. Assorted Bonbons (9pcs) - ₹549 (CHOCOLATES)
+2. Assorted Mendiants (6pcs) - ₹549 is not the most expensive, but ₹419 is less than ₹549, so the second most expensive item in CHOCOLATES is Assorted Mendiants (6pcs) - ₹419 
+3. In the cookies section, the most expensive item is Dark Chocolate Cookies - ₹350/700/1400 (for 250g/½ kg/1kg respectively)
+4. In the cheesecakes section, the most expensive item is any of the seasonal cheesecakes (Mango, Blueberry, Caramel Chocolate Chips) - ₹",0.043,3
+menu,RecursiveCharacterTextSplitter,500,50,4,What are the ordering or delivery notes?,"The ordering or delivery notes are:
+
+1. Please place your orders in advance.
+2. Due to hike in chocolate costs, prices may vary.
+3. An additional charge applies for the chocolate glaze.
+4. Delivery charges are applicable and will be added separately.",0.125,2
+menu,RecursiveCharacterTextSplitter,500,50,4,Which items are seasonal or available on request?,"The items that are seasonal are:
+1. Mango (cheesecakes and Thai Mango Salad)
+2. Blueberry (cheesecakes)
+
+The items that are available on request are:
+1. Tart Cakes
+2. Bombolonis",0.081,3
+menu,RecursiveCharacterTextSplitter,1000,100,2,What is the main topic of this document?,"The main topic of this document is a food menu, listing various items such as frankies, wraps, savories, subways, brownies, cheesecakes, chocolates, cookies, and tea cakes, along with their prices.",0.069,3
+menu,RecursiveCharacterTextSplitter,1000,100,2,What food categories are available?,"The available food categories are:
+
+1. Savouries
+2. Subways
+3. Brownies
+4. Cheesecakes
+5. Chocolates
+6. Cookies
+7. Salads
+8. Tea Cakes",0.06,3
+menu,RecursiveCharacterTextSplitter,1000,100,2,What are the most expensive items?,"The most expensive items are:
+
+1. Cheesecakes (₹500-₹600)
+2. Assorted Bonbons (9pcs) (₹549)
+3. Assorted Mendiants (6pcs) (₹419)
+4. Pistachio Kataifi Bar (₹320)
+5. Half & Half Bar (₹290) and White Chocolate Bar (₹220) are also relatively expensive but not as much as the above items.
+
+However, if we consider the tea cakes, the most expensive ones are:
+
+1. Coffee & Walnut Cake (₹650)
+2. Banana & Walnut Cake (₹600)
+3. Oats & Date Cake (₹600)
+4. Marble",0.034,2
+menu,RecursiveCharacterTextSplitter,1000,100,2,What are the ordering or delivery notes?,"According to the context, the ordering or delivery notes are:
+
+1. Please place your orders in advance.
+2. Due to hike in chocolate costs, prices may vary.
+3. An additional charge applies for the chocolate glaze.
+4. Delivery charges are applicable and will be added separately.",0.05,2
+menu,RecursiveCharacterTextSplitter,1000,100,2,Which items are seasonal or available on request?,"Based on the context, the following items are seasonal or available on request:
+
+1. Mango (seasonal) - under CHEESECAKES
+2. Blueberry (seasonal) - under CHEESECAKES
+3. Thai Mango Salad (seasonal) - under Salads
+4. Tart Cakes and Bombolonis - available as per request (note 3)",0.049,3
+research,CharacterTextSplitter,500,50,1,What is the main topic of this document?,"The main topic of this document is the development and use of Advanced AI-Based Healthcare Chatbot Systems, with a focus on Natural Language Processing, accessibility, and inclusivity.",0.038,3
+research,CharacterTextSplitter,500,50,1,What are the key findings or contributions?,"The key findings of the study are:
+
+1. Considerable advancement in chatbot technology in healthcare.
+2. Neglect to incorporate accessibility features, rendering them less useful for underserved populations, such as older adults and people with disabilities.
+
+The contributions of the study are:
+
+1. Investigating the evolution of healthcare chatbots with a focus on inclusiveness and accessibility.
+2. Laying the foundation for the evolution of future healthcare chatbots through an accessibility-by-design framework to ensure digitally inclusive healthcare applications.",0.112,1
+research,CharacterTextSplitter,500,50,1,Who are the authors?,"The authors are:
+
+1. Vinti Dadheech
+2. Nandini Ranjan Sinha
+3. D. Vinod",0.137,3
+research,CharacterTextSplitter,500,50,1,What NLP methodology was used?,The context does not specify the NLP methodology used. It only mentions that the system uses Natural Language Processing (NLP).,0.126,1
+research,CharacterTextSplitter,500,50,1,What are the limitations of the proposed chatbot?,"The proposed chatbot has limitations in terms of accessibility and inclusiveness, particularly for older adults and people with disabilities. The study found that despite advancements in chatbot technology, there is a neglect to incorporate accessibility features, rendering them less useful for underserved populations.",0.113,2
+research,CharacterTextSplitter,1000,100,1,What is the main topic of this document?,"The main topic of this document is the development and implementation of an Advanced AI-Based Healthcare Chatbot System using Natural Language Processing, with a focus on accessibility and inclusivity.",0.047,3
+research,CharacterTextSplitter,1000,100,1,What are the key findings or contributions?,"The key findings of the study are:
+
+1. Considerable advancement in chatbot technology.
+2. Neglect to incorporate accessibility features, rendering them less useful for underserved populations, such as older adults and people with disabilities.
+
+The contribution of the study is the proposal of an ""accessibility-by-design framework"" to lay the foundation for the evolution of future healthcare chatbots, setting standards for inclusivity and accessibility in digitally inclusive healthcare applications.",0.056,2
+research,CharacterTextSplitter,1000,100,1,Who are the authors?,"The authors are:
+
+1. Vinti Dadheech
+2. Nandini Ranjan Sinha
+3. D. Vinod",0.048,3
+research,CharacterTextSplitter,1000,100,1,What NLP methodology was used?,"The context does not specify the NLP methodology used. It only mentions that the chatbot system uses Natural Language Processing (NLP), but does not provide further details on the specific methodology employed.",0.05,1
+research,CharacterTextSplitter,1000,100,1,What are the limitations of the proposed chatbot?,"The proposed chatbot has a limitation in that it neglects to incorporate accessibility features, rendering it less useful for underserved populations, such as older adults and people with disabilities.",0.045,2
+research,CharacterTextSplitter,1500,150,1,What is the main topic of this document?,"The main topic of this document is the development and implementation of an Advanced AI-Based Healthcare Chatbot System using Natural Language Processing, with a focus on accessibility and inclusivity.",0.04,3
+research,CharacterTextSplitter,1500,150,1,What are the key findings or contributions?,"The key findings of the study are:
+
+1. Considerable advancement in chatbot technology.
+2. Neglect to incorporate accessibility features, rendering them less useful for underserved populations, such as older adults and people with disabilities.
+
+The contributions of the study are:
+
+1. Investigating the evolution of healthcare chatbots with a focus on inclusiveness and accessibility.
+2. Laying the foundation for the evolution of future healthcare chatbots through an accessibility-by-design framework to ensure digitally inclusive healthcare applications.",0.06,2
+research,CharacterTextSplitter,1500,150,1,Who are the authors?,"The authors are:
+
+1. Vinti Dadheech
+2. Nandini Ranjan Sinha
+3. D. Vinod",0.038,3
+research,CharacterTextSplitter,1500,150,1,What NLP methodology was used?,The context does not specify the NLP methodology used. It only mentions that the system utilizes Natural Language Processing (NLP).,0.051,1
+research,CharacterTextSplitter,1500,150,1,What are the limitations of the proposed chatbot?,"The proposed chatbot has a limitation in that it neglects to incorporate accessibility features, rendering it less useful for underserved populations, such as older adults and people with disabilities.",0.05,2
+research,RecursiveCharacterTextSplitter,500,50,38,What is the main topic of this document?,"The main topic of this document is the development and features of a healthcare-related chat interface that utilizes AI and NLP to provide symptom analysis, treatment suggestions, and personalized answers to user queries, with a focus on data privacy, security, and user-friendly interaction.",0.04,2
+research,RecursiveCharacterTextSplitter,500,50,38,What are the key findings or contributions?,"The key features of the project are: 
+
+1. Symptom analysis
+2. Treatment suggestions
+3. User-friendly interface
+4. Continuous AI improvement
+
+Additionally, the project aims to implement robust data management systems to ensure the privacy and security of sensitive medical information in compliance with healthcare regulations. The user interface is designed to be responsive and accessible, using HTML, CSS, and JavaScript.",0.05,1
+research,RecursiveCharacterTextSplitter,500,50,38,Who are the authors?,"The authors mentioned in the context are:
+
+1. Marr, B.
+2. Obermeyer, Z.
+3. Emanuel, E. J.
+4. Shah, A. S.
+5. Mamas, M. A.",0.04,1
+research,RecursiveCharacterTextSplitter,500,50,38,What NLP methodology was used?,Google Gemini-Pro was used to enhance the completeness and efficiency of clinical communication.,0.042,2
+research,RecursiveCharacterTextSplitter,500,50,38,What are the limitations of the proposed chatbot?,"The context does not explicitly state the limitations of the proposed chatbot. However, it mentions that ""ethical research shows gaps in the design of chatbots, particularly for older adults and people with disabilities and low digital literacies"", which implies that the proposed chatbot may have limitations in terms of accessibility and usability for these groups.",0.046,2
+research,RecursiveCharacterTextSplitter,1000,100,20,What is the main topic of this document?,"The main topic of this document is the use of Artificial Intelligence (AI) and chatbots in healthcare, specifically focusing on improving healthcare accessibility and patient experience.",0.04,3
+research,RecursiveCharacterTextSplitter,1000,100,20,What are the key findings or contributions?,"The key findings or contributions from the provided context are:
+
+1. Artificial Intelligence (AI) has the potential to transform healthcare by reducing the load on physicians and allowing them to focus on complex situations.
+2. AI-powered chatbots can regulate emotions and provide mental health support (SERMO).
+3. Telehealth can promote access, quality, and efficiency in healthcare.
+4. Natural Language Processing (NLP) is being used in healthcare to improve patient outcomes.
+5. AI can help predict the future of clinical medicine using big data and machine learning.
+6. AI-powered platforms can help reduce the load on physicians by answering relatively simple questions.
+
+Overall, the key findings suggest that AI has the potential to improve healthcare outcomes, reduce the workload of physicians, and",0.05,1
+research,RecursiveCharacterTextSplitter,1000,100,20,Who are the authors?,"The authors mentioned in the context are:
+
+1. Abid et al. (2021b)
+2. Davenport, T., & Kalakota, R. (2019)
+3. Guan, Y., & Ma, Y. (2020)
+4. Liu, X., & Xu, Y. (2021)
+5. Marr, B. (2020)
+6. Obermeyer, Z., & Emanuel, E. J. (2016)
+7. Shah, A. S., & Mamas, M. A. (2019)",0.07,1
+research,RecursiveCharacterTextSplitter,1000,100,20,What NLP methodology was used?,"The context does not explicitly mention a specific NLP methodology used. However, it mentions that the proposed model utilizes ""cutting-edge Natural Language Processing (NLP) methods"" and employs ""Google Gemini-Pro"" to enhance clinical communication.",0.052,2
+research,RecursiveCharacterTextSplitter,1000,100,20,What are the limitations of the proposed chatbot?,"The limitations of the proposed chatbot include:
+
+1. Challenges in inclusivity and personalization.
+2. Gaps in design, particularly for older adults and people with disabilities and low digital literacies.
+3. Difficulty in providing services to diverse demographics, especially the elderly or disabled.
+4. Limited accessibility for users with limited to no tech literacy or physical ability.",0.051,3
+resume,CharacterTextSplitter,500,50,1,What is the main topic of this document?,"The main topic of this document is Nandini Ranjan Sinha's resume or professional profile, highlighting her education, skills, experience, and career aspirations in the field of data analytics and technology.",0.037,3
+resume,CharacterTextSplitter,500,50,1,What are the key skills mentioned?,"The key skills mentioned are:
+
+1. Data & Reporting: 
+   - Advanced Excel
+   - Power BI
+   - SQL
+
+2. Programming: 
+   - Python (including libraries such as Pandas, NumPy, Scikit-learn, etc.)
+
+3. Analytics: 
+   - Process Optimization
+   - Data Visualization
+   - EDA
+   - Predictive Modelling
+   - KPI Tracking
+   - Workflow Design
+   - A/B Testing
+   - Root Cause Analysis
+
+4. Product & Tools: 
+   - Agile Methodology
+   - Backlog Prioritization
+   - Business Requirements
+   - Stakeholder Management
+   - Jira
+   - Notion
+   - Git",0.05,2
+resume,CharacterTextSplitter,500,50,1,What is the person's educational background?,"The person, Nandini Ranjan Sinha, has a B.Tech degree in Computer Science and Engineering from SRM Institute of Science and Technology, Chennai, India, with a CGPA of 9.45/10, completed between Sep 2021 and Jun 2025. Relevant coursework includes Statistics, Probability Theory, Database Management, Machine Learning, and Data Structures & Algorithms.",0.049,3
+resume,CharacterTextSplitter,500,50,1,What projects has the person worked on?,"The context does not explicitly mention specific projects the person has worked on. However, it mentions that during their Data Science Intern role at Prasunet Company, they:
+
+* Developed 10+ data dashboards using Power BI to provide transparency and key insights to senior management.
+* Translated complex business problems into practical technical designs using Python and ML, achieving a 12% accuracy improvement.",0.043,1
+resume,CharacterTextSplitter,500,50,1,What certifications or publications are mentioned?,None. There are no certifications or publications mentioned in the provided context.,0.037,1
+resume,CharacterTextSplitter,1000,100,1,What is the main topic of this document?,"The main topic of this document is Nandini Ranjan Sinha's resume or professional profile, highlighting her education, skills, experience, and career aspirations in the field of data analytics and technology.",0.034,3
+resume,CharacterTextSplitter,1000,100,1,What are the key skills mentioned?,"The key skills mentioned are:
+
+1. Data & Reporting: 
+   - Advanced Excel
+   - Power BI
+   - SQL
+
+2. Programming: 
+   - Python (with various libraries such as Pandas, NumPy, Scikit-learn, etc.)
+
+3. Analytics: 
+   - Process Optimization
+   - Data Visualization
+   - EDA
+   - Predictive Modelling
+   - KPI Tracking
+   - Workflow Design
+   - A/B Testing
+   - Root Cause Analysis
+
+4. Product & Tools: 
+   - Agile Methodology
+   - Backlog Prioritization
+   - Business Requirements
+   - Stakeholder Management
+   - Jira
+   - Notion
+   - Git",0.057,2
+resume,CharacterTextSplitter,1000,100,1,What is the person's educational background?,"The person, Nandini Ranjan Sinha, has a B.Tech degree in Computer Science and Engineering from SRM Institute of Science and Technology, Chennai, India, with a CGPA of 9.45/10, completed from Sep 2021 to Jun 2025. Relevant coursework includes Statistics, Probability Theory, Database Management, Machine Learning, and Data Structures & Algorithms.",0.05,3
+resume,CharacterTextSplitter,1000,100,1,What projects has the person worked on?,"The context does not explicitly mention specific projects the person has worked on. However, it does mention that during their Data Science Intern role at Prasunet Company, they:
+
+* Developed 10+ data dashboards using Power BI to provide transparency and key insights to senior management.
+* Translated complex business problems into practical technical designs using Python and ML, achieving a 12% accuracy improvement.",0.05,1
+resume,CharacterTextSplitter,1000,100,1,What certifications or publications are mentioned?,None. There are no certifications or publications mentioned in the provided context.,0.048,1
+resume,CharacterTextSplitter,1500,150,1,What is the main topic of this document?,"The main topic of this document is Nandini Ranjan Sinha's resume or professional profile, highlighting her education, skills, experience, and career aspirations in the field of data analytics and technology.",0.047,3
+resume,CharacterTextSplitter,1500,150,1,What are the key skills mentioned?,"The key skills mentioned are:
+
+1. Data & Reporting 
+   - Advanced Excel 
+   - Power BI 
+   - SQL
+
+2. Programming 
+   - Python 
+
+3. Analytics 
+   - Process Optimization 
+   - Data Visualization 
+   - EDA 
+   - Predictive Modelling 
+   - KPI Tracking 
+   - Workflow Design 
+   - A/B Testing 
+   - Root Cause Analysis
+
+4. Product & Tools 
+   - Agile Methodology 
+   - Backlog Prioritization 
+   - Business Requirements 
+   - Stakeholder Management 
+   - Jira 
+   - Notion 
+   - Git 
+   - REST APIs",0.05,2
+resume,CharacterTextSplitter,1500,150,1,What is the person's educational background?,"The person, Nandini Ranjan Sinha, has a B.Tech degree in Computer Science and Engineering from SRM Institute of Science and Technology, Chennai, India, with a CGPA of 9.45/10, completed from September 2021 to June 2025. Relevant coursework includes Statistics, Probability Theory, Database Management, Machine Learning, Data Structures & Algorithms.",0.06,3
+resume,CharacterTextSplitter,1500,150,1,What projects has the person worked on?,"The context does not explicitly mention specific projects the person has worked on. However, it mentions that during their Data Science Intern role at Prasunet Company, they:
+
+* Developed 10+ data dashboards using Power BI to provide transparency and key insights to senior management.
+* Translated complex business problems into practical technical designs using Python and ML, achieving a 12% accuracy improvement.",0.055,1
+resume,CharacterTextSplitter,1500,150,1,What certifications or publications are mentioned?,None. There are no certifications or publications mentioned in the provided context.,0.05,1
+resume,RecursiveCharacterTextSplitter,500,50,10,What is the main topic of this document?,"The main topic of this document appears to be a resume or a professional profile, highlighting the individual's education, experience, skills, and projects in the field of data science and technology.",0.05,3
+resume,RecursiveCharacterTextSplitter,500,50,10,What are the key skills mentioned?,"The key skills mentioned are:
+
+1. Data & Reporting: 
+   - Advanced Excel
+   - Power BI
+   - SQL
+
+2. Programming: 
+   - Python (including libraries such as Pandas, NumPy, Scikit-learn, etc.)
+
+3. Analytics: 
+   - Process Optimization
+   - Data Visualization
+   - EDA
+   - Predictive Modelling
+   - KPI Tracking
+   - Workflow Design
+   - A/B Testing
+   - Root Cause Analysis
+
+4. Product & Tools: 
+   - Agile Methodology
+   - Backlog Prioritization
+   - Business Requirements
+   - Stakeholder Management
+   - Jira
+   - Notion
+   - Git",0.048,2
+resume,RecursiveCharacterTextSplitter,500,50,10,What is the person's educational background?,"The person's educational background is B.Tech in Computer Science and Engineering from SRM Institute of Science and Technology, Chennai, India, with a CGPA of 9.45/10, completed from Sep 2021 to Jun 2025.",0.15,3
+resume,RecursiveCharacterTextSplitter,500,50,10,What projects has the person worked on?,"The context does not explicitly mention specific project names that the person has worked on. However, it mentions that the person:
+
+* Developed 10+ data dashboards using Power BI as a Data Science Intern at Prasunet Company.
+* Translated complex business problems into practical technical designs using Python and ML, achieving a 12% accuracy improvement.
+
+These can be considered as projects or accomplishments, but specific project names are not mentioned.",0.124,1
+resume,RecursiveCharacterTextSplitter,500,50,10,What certifications or publications are mentioned?,None. There are no certifications or publications mentioned in the provided context.,0.13,1
+resume,RecursiveCharacterTextSplitter,1000,100,5,What is the main topic of this document?,"The main topic of this document is a resume or a professional profile, specifically highlighting the skills, experience, and education of Nandini Ranjan Sinha in the field of data science and analytics.",0.069,3
+resume,RecursiveCharacterTextSplitter,1000,100,5,What are the key skills mentioned?,"The key skills mentioned are:
+
+1. Data & Reporting: 
+   - Advanced Excel
+   - Power BI
+   - SQL
+
+2. Programming: 
+   - Python (with various libraries such as Pandas, NumPy, Scikit-learn, etc.)
+
+3. Analytics: 
+   - Process Optimization
+   - Data Visualization
+   - EDA
+   - Predictive Modelling
+   - KPI Tracking
+   - Workflow Design
+   - A/B Testing
+   - Root Cause Analysis
+
+4. Product & Tools: 
+   - Agile Methodology
+   - Backlog Prioritization
+   - Business Requirements
+   - Stakeholder Management
+   - Jira
+   - Notion
+   - Git",0.136,2
+resume,RecursiveCharacterTextSplitter,1000,100,5,What is the person's educational background?,"The person's educational background is a B.Tech in Computer Science and Engineering from SRM Institute of Science and Technology, Chennai, India, with a CGPA of 9.45/10, completed between Sep 2021 and Jun 2025. Relevant coursework includes Statistics, Probability Theory, Database Management, Machine Learning, Data Structures & Algorithms.",0.09,3
+resume,RecursiveCharacterTextSplitter,1000,100,5,What projects has the person worked on?,"The context does not explicitly mention specific project names that the person has worked on. However, it mentions that the person:
+
+* Developed 10+ data dashboards using Power BI as a Data Science Intern at Prasunet Company.
+* Translated complex business problems into practical technical designs using Python and ML.
+* Conducted an ablation study across 5 configs (chunk sizes 500–1500, splitter strategies), but the context does not provide further details about this project.",0.132,1
+resume,RecursiveCharacterTextSplitter,1000,100,5,What certifications or publications are mentioned?,None. The context does not mention any certifications or publications.,0.112,1
