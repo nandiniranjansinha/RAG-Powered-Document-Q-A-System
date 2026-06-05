@@ -1,5 +1,8 @@
 # RAG-Powered Document Q&A System
 A Retrieval-Augmented Generation pipeline for multi-format document Q&A using FAISS vector search and Groq's LLaMA 3.3 70B — with a chunking ablation study across 3 document types and 5 configs.
+---
+## Live Demo
+[Ask-My-Doc](https://ask-my-doc.streamlit.app/)
 
 ---
 
