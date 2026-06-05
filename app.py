@@ -12,7 +12,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.docstore.in_memory import InMemoryDocstore
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
-from secret_api_keys import huggingface_api_key
+huggingface_api_key = st.secrets["huggingface_api_key"]
 
 # Set the Hugging Face Hub API token as an environment variable
 os.environ['HUGGINGFACEHUB_API_TOKEN'] = huggingface_api_key
@@ -112,7 +112,7 @@ def answer_question(vectorstore, query):
     """Answers a question using Groq API (fast and powerful!)"""
     try:
         from groq import Groq
-        from secret_api_keys import groq_api_key
+        groq_api_key = st.secrets["groq_api_key"]
     except ImportError:
         st.error("Groq library not installed. Run: pip install groq")
         return "❌ Groq library missing"
